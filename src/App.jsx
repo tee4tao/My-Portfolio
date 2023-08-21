@@ -2,6 +2,7 @@ import { useEffect, useState, useRef } from "react";
 import preloader from "./Image/preloader.gif";
 import logo from "./Image/tee4tao W.jpg";
 import tao from "./Image/tao img.jpg";
+import project1 from "./Image/CGPA-cal img.png";
 import {
   FaBars,
   FaTimes,
@@ -10,12 +11,14 @@ import {
   FaGithub,
   FaLinkedinIn,
 } from "react-icons/fa";
+import { BsDot } from "react-icons/bs";
 import { FaArrowUpLong } from "react-icons/fa6";
 
 function App() {
   const [count, setCount] = useState(0);
   const [offPreloader, setOffPreloader] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [openProjectModal, setOpenProjectModal] = useState(true);
   const toggleSidebar = () => {
     setIsOpen(false);
   };
@@ -23,7 +26,7 @@ function App() {
   // const navRef = useRef(null);
   useEffect(() => {
     const navHeight = navRef.current.getBoundingClientRect().height;
-    window.addEventListener("scroll", function () {
+    const scrollFunc = () => {
       const scrollHeight = window.pageYOffset;
       if (scrollHeight > navHeight) {
         navRef.current.classList.add("fixed-nav");
@@ -37,31 +40,21 @@ function App() {
       } else {
         topLink.classList.remove("show-link");
       }
-    });
+    };
+    window.addEventListener("scroll", scrollFunc);
     // ********** smooth scroll ************
     // select links
     const scrollLinks = document.querySelectorAll(".scroll-link");
     scrollLinks.forEach((link) => {
-      link.addEventListener("click", (e) => {
+      const clickFunc = (e) => {
         // prevent default
         e.preventDefault();
         // navigate to specific spot
         const id = e.currentTarget.getAttribute("href").slice(1);
         const element = document.getElementById(id);
-        console.log(element);
 
-        // const navHeight = navbar.getBoundingClientRect().height;
-        // const containerHeight = linksContainer.getBoundingClientRect().height;
         const fixedNav = navRef.current.classList.add("fixed-nav");
         let position = element.offsetTop - navHeight;
-        console.log(position);
-
-        if (!fixedNav) {
-          position = position - navHeight;
-        }
-        // if (navHeight > 82) {
-        //   position = position + containerHeight;
-        // }
 
         window.scrollTo({
           left: 0,
@@ -69,8 +62,11 @@ function App() {
         });
         // // close
         // linksContainer.style.height = 0;
-      });
+      };
+      link.addEventListener("click", clickFunc);
+      return () => link.removeEventListener(`click`, clickFunc);
     });
+    return () => window.removeEventListener(`scroll`, scrollFunc);
   });
 
   return (
@@ -230,24 +226,139 @@ function App() {
           </div>
         </section>
         <section id="projects">
-          {/* <div className="projects-container">
-            <div className="projects-header">my projects</div>
-            <div className="projects-details">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis
-              ullam, beatae possimus rerum, tenetur, excepturi ab porro
-              provident eos et quo harum aliquam voluptate consequatur nam
-              repudiandae magnam itaque! Nobis, voluptatum. Quas consequuntur
-              blanditiis ipsam accusamus dolore ad ab repellat eligendi commodi
-              laborum reiciendis fugit reprehenderit delectus nulla ipsum,
-              cumque voluptates a molestiae amet minima culpa sit autem?
-              Accusamus velit nam iusto doloremque neque culpa ipsam sapiente
-              voluptatibus aut ratione quas nihil nobis, laudantium aliquid
-              porro amet impedit adipisci itaque voluptates! Sit voluptates
-              necessitatibus, expedita molestiae enim eius odio aperiam ratione
-              quisquam repudiandae nemo rem cumque illo accusamus corrupti
-              similique!
+          <div className="projects-container">
+            <div className="header-container">
+              <div className="projects-header">my projects</div>
+              <div className="underline"></div>
+              <div className="test-container">
+                <div className="projects-details">
+                  <div
+                    className="project-img_container"
+                    onMouseLeave={() => setOpenProjectModal(false)}
+                  >
+                    <div
+                      className={`${
+                        openProjectModal
+                          ? `project-img_details show-details`
+                          : `project-img_details`
+                      }`}
+                    >
+                      <div className="img-details_container">
+                        This is a calculator that helps students calculate their
+                        CGPA and tell you the Class of Degree you fall into.
+                        <div>Built With: </div>
+                        <div>
+                          HTML
+                          <BsDot />
+                          CSS
+                          <BsDot />
+                          React JS
+                        </div>
+                        <div className="img-btns_container">
+                          <button className="view-project_btn">
+                            <a href="https://cgpa-calculator01.netlify.app/">
+                              view project
+                            </a>
+                          </button>
+                          <button className="view-code_btn">
+                            <a href="https://github.com/tee4tao/cgpa-calculator">
+                              view code <FaGithub />
+                            </a>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <img
+                      src={project1}
+                      alt="CGPA Calculator"
+                      className={`${
+                        openProjectModal ? `project-img test` : `project-img`
+                      }`}
+                      onMouseEnter={() => setOpenProjectModal(true)}
+                    />
+                  </div>
+                  <div className="project-title">CGPA Calculator</div>
+                </div>
+                <div className="projects-details">
+                  <div
+                    className="project-img_container"
+                    onMouseLeave={() => setOpenProjectModal(false)}
+                  >
+                    <div
+                      className={`${
+                        openProjectModal
+                          ? `project-img_details show-details`
+                          : `project-img_details`
+                      }`}
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Repudiandae molestias alias, voluptatibus et harum,
+                      ratione eum quasi dolorem natus unde veniam sequi
+                      provident possimus pariatur laboriosam. Architecto
+                      asperiores laborum quasi, nesciunt vitae rem ad tempore,
+                      repudiandae temporibus sed ut soluta officiis quis quas
+                      quia! Distinctio tenetur quisquam deleniti quas
+                      perferendis.
+                    </div>
+                    <img
+                      src={project1}
+                      alt="CGPA Calculator"
+                      className={`${
+                        openProjectModal ? `project-img test` : `project-img`
+                      }`}
+                      onMouseEnter={() => setOpenProjectModal(true)}
+                    />
+                  </div>
+                  <div>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Facilis ullam, beatae possimus rerum, tenetur, excepturi ab
+                    porro provident eos et quo harum aliquam voluptate
+                    consequatur nam repudiandae magnam itaque! Nobis,
+                    voluptatum.
+                  </div>
+                </div>
+
+                <div className="projects-details">
+                  <div
+                    className="project-img_container"
+                    onMouseLeave={() => setOpenProjectModal(false)}
+                  >
+                    <div
+                      className={`${
+                        openProjectModal
+                          ? `project-img_details show-details`
+                          : `project-img_details`
+                      }`}
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Repudiandae molestias alias, voluptatibus et harum,
+                      ratione eum quasi dolorem natus unde veniam sequi
+                      provident possimus pariatur laboriosam. Architecto
+                      asperiores laborum quasi, nesciunt vitae rem ad tempore,
+                      repudiandae temporibus sed ut soluta officiis quis quas
+                      quia! Distinctio tenetur quisquam deleniti quas
+                      perferendis.
+                    </div>
+                    <img
+                      src={project1}
+                      alt="CGPA Calculator"
+                      className={`${
+                        openProjectModal ? `project-img test` : `project-img`
+                      }`}
+                      onMouseEnter={() => setOpenProjectModal(true)}
+                    />
+                  </div>
+                  <div>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Facilis ullam, beatae possimus rerum, tenetur, excepturi ab
+                    porro provident eos et quo harum aliquam voluptate
+                    consequatur nam repudiandae magnam itaque! Nobis,
+                    voluptatum.
+                  </div>
+                </div>
+              </div>
             </div>
-          </div> */}
+          </div>
         </section>
         <a className="scroll-link top-link" href="#home">
           <FaArrowUpLong />
