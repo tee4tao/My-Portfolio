@@ -3,6 +3,7 @@ import preloader from "./Image/preloader.gif";
 import logo from "./Image/tee4tao W.jpg";
 import tao from "./Image/tao img.jpg";
 import project1 from "./Image/CGPA-cal img.png";
+import project2 from "./Image/grocery-bud.png";
 import {
   FaBars,
   FaTimes,
@@ -10,15 +11,18 @@ import {
   FaWhatsapp,
   FaGithub,
   FaLinkedinIn,
+  FaArrowCircleRight,
 } from "react-icons/fa";
 import { BsDot } from "react-icons/bs";
 import { FaArrowUpLong } from "react-icons/fa6";
+import { BiLogoGmail } from "react-icons/bi";
 
 function App() {
   const [count, setCount] = useState(0);
   const [offPreloader, setOffPreloader] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  const [openProjectModal, setOpenProjectModal] = useState(true);
+  const [openProject1Modal, setOpenProject1Modal] = useState(false);
+  const [openProject2Modal, setOpenProject2Modal] = useState(false);
   const toggleSidebar = () => {
     setIsOpen(false);
   };
@@ -210,7 +214,10 @@ function App() {
         </section>
         <section className="about" id="about">
           <div className="about-container">
-            <h1 className="about-header">about me</h1>
+            <div className="header-container">
+              <h1 className="about-header">about me</h1>
+              <div className="underline about-underline"></div>
+            </div>
             <div className="about-details">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
               Aspernatur minus voluptatem earum unde eum? Quasi, ullam minima,
@@ -228,138 +235,225 @@ function App() {
         <section id="projects">
           <div className="projects-container">
             <div className="header-container">
-              <div className="projects-header">my projects</div>
+              <h1 className="projects-header">my projects</h1>
               <div className="underline"></div>
-              <div className="test-container">
-                <div className="projects-details">
+            </div>
+            <div className="test-container">
+              {/* project 1 */}
+              <div className="projects-details">
+                <div
+                  className="project-img_container"
+                  onMouseLeave={() => setOpenProject1Modal(false)}
+                >
                   <div
-                    className="project-img_container"
-                    onMouseLeave={() => setOpenProjectModal(false)}
+                    className={`${
+                      openProject1Modal
+                        ? `project-img_details show-details`
+                        : `project-img_details`
+                    }`}
                   >
-                    <div
-                      className={`${
-                        openProjectModal
-                          ? `project-img_details show-details`
-                          : `project-img_details`
-                      }`}
-                    >
-                      <div className="img-details_container">
-                        This is a calculator that helps students calculate their
-                        CGPA and tell you the Class of Degree you fall into.
-                        <div>Built With: </div>
-                        <div>
-                          HTML
-                          <BsDot />
-                          CSS
-                          <BsDot />
-                          React JS
-                        </div>
-                        <div className="img-btns_container">
-                          <button className="view-project_btn">
-                            <a href="https://cgpa-calculator01.netlify.app/">
-                              view project
-                            </a>
-                          </button>
-                          <button className="view-code_btn">
-                            <a href="https://github.com/tee4tao/cgpa-calculator">
-                              view code <FaGithub />
-                            </a>
-                          </button>
-                        </div>
+                    <div className="img-details_container">
+                      This is a calculator that helps students calculate their
+                      CGPA and tell you the Class of Degree you fall into.
+                      <div>Built With: </div>
+                      <div>
+                        HTML
+                        <BsDot />
+                        CSS
+                        <BsDot />
+                        React JS
+                      </div>
+                      <div className="img-btns_container">
+                        <button className="view-project_btn">
+                          <a href="https://cgpa-calculator01.netlify.app/">
+                            view project
+                            <span className="btn-icon">
+                              <FaArrowCircleRight />
+                            </span>
+                          </a>
+                        </button>
+                        <button className="view-code_btn">
+                          <a href="https://github.com/tee4tao/cgpa-calculator">
+                            view code
+                            <span className="btn-icon">
+                              <FaGithub />
+                            </span>
+                          </a>
+                        </button>
                       </div>
                     </div>
-                    <img
-                      src={project1}
-                      alt="CGPA Calculator"
-                      className={`${
-                        openProjectModal ? `project-img test` : `project-img`
-                      }`}
-                      onMouseEnter={() => setOpenProjectModal(true)}
-                    />
                   </div>
-                  <div className="project-title">CGPA Calculator</div>
+                  <img
+                    src={project1}
+                    alt="CGPA Calculator"
+                    className={`${
+                      openProject1Modal ? `project-img test` : `project-img`
+                    }`}
+                    onMouseEnter={() => setOpenProject1Modal(true)}
+                  />
                 </div>
-                <div className="projects-details">
+                <div className="project-title">CGPA Calculator</div>
+              </div>
+              {/* project 2 */}
+              <div className="projects-details">
+                <div
+                  className="project-img_container"
+                  onMouseLeave={() => setOpenProject2Modal(false)}
+                >
                   <div
-                    className="project-img_container"
-                    onMouseLeave={() => setOpenProjectModal(false)}
+                    className={`${
+                      openProject2Modal
+                        ? `project-img_details show-details`
+                        : `project-img_details`
+                    }`}
                   >
-                    <div
-                      className={`${
-                        openProjectModal
-                          ? `project-img_details show-details`
-                          : `project-img_details`
-                      }`}
-                    >
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Repudiandae molestias alias, voluptatibus et harum,
-                      ratione eum quasi dolorem natus unde veniam sequi
-                      provident possimus pariatur laboriosam. Architecto
-                      asperiores laborum quasi, nesciunt vitae rem ad tempore,
-                      repudiandae temporibus sed ut soluta officiis quis quas
-                      quia! Distinctio tenetur quisquam deleniti quas
-                      perferendis.
+                    <div className="img-details_container">
+                      This is a To-do list built where items can be added,
+                      marked as read and deleted. All the items added are saved
+                      in the local storage.
+                      <div>Built With: </div>
+                      <div>
+                        HTML
+                        <BsDot />
+                        CSS
+                        <BsDot />
+                        React JS
+                      </div>
+                      <div className="img-btns_container">
+                        <button className="view-project_btn">
+                          <a href="https://groceries-lists.netlify.app/">
+                            view project
+                            <span className="btn-icon">
+                              <FaArrowCircleRight />
+                            </span>
+                          </a>
+                        </button>
+                        <button className="view-code_btn">
+                          <a href="https://github.com/tee4tao/Grocery-bud-updated">
+                            view code
+                            <span className="btn-icon">
+                              <FaGithub />
+                            </span>
+                          </a>
+                        </button>
+                      </div>
                     </div>
-                    <img
-                      src={project1}
-                      alt="CGPA Calculator"
-                      className={`${
-                        openProjectModal ? `project-img test` : `project-img`
-                      }`}
-                      onMouseEnter={() => setOpenProjectModal(true)}
-                    />
+                  </div>
+                  <img
+                    src={project2}
+                    alt="Grocery Bud"
+                    className={`${
+                      openProject2Modal ? `project-img test` : `project-img`
+                    }`}
+                    onMouseEnter={() => setOpenProject2Modal(true)}
+                  />
+                </div>
+                <div className="project-title">Grocery Bud</div>
+              </div>
+            </div>
+            <button className="see-more">more projects</button>
+          </div>
+        </section>
+        {/* contact */}
+        <section id="contact">
+          <div className="contact-container">
+            <div className="header-container">
+              <h1 className="contact-header">contact me</h1>
+              <div className="underline"></div>
+            </div>
+            <div className="contact-details">
+              <h3>reach out to me:</h3>
+              <div className="social-container">
+                <div className="social linkedin">
+                  <div className="social-icon">
+                    <FaLinkedinIn />
                   </div>
                   <div>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Facilis ullam, beatae possimus rerum, tenetur, excepturi ab
-                    porro provident eos et quo harum aliquam voluptate
-                    consequatur nam repudiandae magnam itaque! Nobis,
-                    voluptatum.
+                    Contact me on{" "}
+                    <a className="link" href="https://linkedin.com/in/tee4tao">
+                      Linkedin
+                    </a>
                   </div>
                 </div>
-
-                <div className="projects-details">
-                  <div
-                    className="project-img_container"
-                    onMouseLeave={() => setOpenProjectModal(false)}
-                  >
-                    <div
-                      className={`${
-                        openProjectModal
-                          ? `project-img_details show-details`
-                          : `project-img_details`
-                      }`}
-                    >
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Repudiandae molestias alias, voluptatibus et harum,
-                      ratione eum quasi dolorem natus unde veniam sequi
-                      provident possimus pariatur laboriosam. Architecto
-                      asperiores laborum quasi, nesciunt vitae rem ad tempore,
-                      repudiandae temporibus sed ut soluta officiis quis quas
-                      quia! Distinctio tenetur quisquam deleniti quas
-                      perferendis.
-                    </div>
-                    <img
-                      src={project1}
-                      alt="CGPA Calculator"
-                      className={`${
-                        openProjectModal ? `project-img test` : `project-img`
-                      }`}
-                      onMouseEnter={() => setOpenProjectModal(true)}
-                    />
+                <div className="social twitter">
+                  <div className="social-icon">
+                    <FaTwitter />
                   </div>
                   <div>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Facilis ullam, beatae possimus rerum, tenetur, excepturi ab
-                    porro provident eos et quo harum aliquam voluptate
-                    consequatur nam repudiandae magnam itaque! Nobis,
-                    voluptatum.
+                    Send me a{" "}
+                    <a className="link" href="https://twitter.com/tee4tao">
+                      tweet
+                    </a>
+                  </div>
+                </div>
+                <div className="social whatsapp">
+                  <div className="social-icon">
+                    <FaWhatsapp />
+                  </div>
+                  <div>
+                    Contact me on{" "}
+                    <a
+                      className="link"
+                      href="https://api.whatsapp.com/send/?phone=%2B2348165013325&text&type=phone_number&app_absent=0"
+                    >
+                      whatsapp
+                    </a>
+                  </div>
+                </div>
+                <div className="social mail">
+                  <div className="social-icon">
+                    <BiLogoGmail />
+                  </div>
+                  <div>
+                    You can email me at:{" "}
+                    <a
+                      className="link"
+                      href="mailto:adeniyitaofeek001@gmail.com"
+                    >
+                      adeniyitaofeek001@gmail.com
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
+        <footer>
+          <div className="footer-container">
+            <ul className="social-links sidebar-icons footer-social">
+              <li>
+                <a
+                  href="https://linkedin.com/in/tee4tao"
+                  className="social-link "
+                >
+                  <FaLinkedinIn />
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/tee4tao" className="social-link">
+                  <FaGithub />
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/tee4tao" className="social-link">
+                  <FaTwitter />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://api.whatsapp.com/send/?phone=%2B2348165013325&text&type=phone_number&app_absent=0"
+                  className="social-link"
+                >
+                  <FaWhatsapp />
+                </a>
+              </li>
+            </ul>
+            <div className="footer-details">
+              copyright &copy; {new Date().getFullYear()} TEE4TAO. All right
+              reserved
+            </div>
+          </div>
+        </footer>
         <a className="scroll-link top-link" href="#home">
           <FaArrowUpLong />
         </a>
