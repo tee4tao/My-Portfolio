@@ -624,11 +624,15 @@ projects
   border-radius: 2rem;
   text-transform: capitalize;
   color: #fff;
-  background-color: #0f051d;
+  /* background-color: #0f051d; */
+  background-color: rgba(0, 0, 0, 0.5);
   animation: bounce 2s ease-in-out infinite;
   margin-top: 1rem;
   cursor: pointer;
   transition: all 0.3s linear;
+}
+.see-more * {
+  color: #000;
 }
 .see-more:hover {
   color: #0f051d;
@@ -759,4 +763,7 @@ footer {
   color: white;
   font-size: 1.2rem;
   text-transform: capitalize;
+}
+.about-main {
+  /* height: 100vh; */
 }
