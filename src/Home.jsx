@@ -125,7 +125,7 @@ const Home = () => {
                 to delivering exceptional user experiences
               </div>
 
-              <Link to={"/projects"} className="about-details_link">
+              <Link to={"/about"} className="about-details_link">
                 <button className="see-more more-about">see more</button>
               </Link>
             </div>
