@@ -1,11 +1,12 @@
 import React, { useEffect, useRef } from "react";
 import logo from "./Image/tee4tao W.jpg";
-import { Outlet, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Footer from "./Footer";
 import { useGlobalContext } from "./context";
 import project1 from "./Image/CGPA-cal img.png";
 import project2 from "./Image/grocery-bud.png";
 import project3 from "./Image/cart.png";
+import project4 from "./Image/cocktail.png";
 import {
   FaBars,
   FaTimes,
@@ -27,6 +28,8 @@ const Projects = () => {
     setOpenProject2Modal,
     openProject3Modal,
     setOpenProject3Modal,
+    openProject4Modal,
+    setOpenProject4Modal,
   } = useGlobalContext();
   const navRef = useRef(null);
   useEffect(() => {
@@ -38,25 +41,21 @@ const Projects = () => {
       } else {
         navRef.current.classList.remove("fixed-nav");
       }
-      // // setup back to top link
-      // const topLink = document.querySelector(".top-link");
-      // if (scrollHeight > 400) {
-      //   topLink.classList.add("show-link");
-      // } else {
-      //   topLink.classList.remove("show-link");
-      // }
     };
     window.addEventListener("scroll", scrollFunc);
 
     return () => window.removeEventListener(`scroll`, scrollFunc);
   });
   return (
-    <main className="about-main">
+    <main className="projects-main">
       {/* nav */}
       <nav className="nav" ref={navRef}>
         <div className="nav-center">
           <div className="nav-header">
-            <img src={logo} alt="Tee4Tao" className="nav-logo" />
+            <Link to={"/"}>
+              <img src={logo} alt="Tee4Tao" className="nav-logo" />
+            </Link>
+
             <button className="aside-toggle_btn" onClick={openSidebar}>
               <FaBars />
             </button>
@@ -71,21 +70,6 @@ const Projects = () => {
             <Link to={"/projects"} className="scroll-link">
               projects
             </Link>
-            <Link to={"/"} className="scroll-link">
-              home
-            </Link>
-            {/* <a href="#home" className="scroll-link">
-              home
-            </a>
-            <a href="#about" className="scroll-link">
-              about
-            </a>
-            <a href="#projects" className="scroll-link">
-              projects
-            </a>
-            <a href="#contact" className="scroll-link">
-              contact
-            </a> */}
           </div>
         </div>
       </nav>
@@ -117,11 +101,6 @@ const Projects = () => {
                 onClick={closeSidebar}
               >
                 projects
-              </Link>
-            </li>
-            <li>
-              <Link to={"/"} className="scroll-link" onClick={closeSidebar}>
-                home
               </Link>
             </li>
           </ul>
@@ -214,6 +193,61 @@ const Projects = () => {
               </div>
               <div className="project-title">CGPA Calculator</div>
             </div>
+            {/* project 4 */}
+            <div className="projects-details">
+              <div
+                className="project-img_container"
+                onMouseLeave={() => setOpenProject4Modal(false)}
+              >
+                <div
+                  className={`${
+                    openProject4Modal
+                      ? `project-img_details show-details`
+                      : `project-img_details`
+                  }`}
+                >
+                  <div className="img-details_container">
+                    This is a website where you can search for your favourite
+                    cocktail. Data about the drinks are fetched from an API.
+                    <div>Built With: </div>
+                    <div>
+                      HTML
+                      <BsDot />
+                      CSS
+                      <BsDot />
+                      React JS
+                    </div>
+                    <div className="img-btns_container">
+                      <button className="view-project_btn">
+                        <a href="https://cocktails-projects.netlify.app/">
+                          view project
+                          <span className="btn-icon">
+                            <FaArrowCircleRight />
+                          </span>
+                        </a>
+                      </button>
+                      <button className="view-code_btn">
+                        <a href="https://github.com/tee4tao/cocktails">
+                          view code
+                          <span className="btn-icon">
+                            <FaGithub />
+                          </span>
+                        </a>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <img
+                  src={project4}
+                  alt="Cart"
+                  className={`${
+                    openProject4Modal ? `project-img test` : `project-img`
+                  }`}
+                  onMouseEnter={() => setOpenProject4Modal(true)}
+                />
+              </div>
+              <div className="project-title">Cart</div>
+            </div>
             {/* project 2 */}
             <div className="projects-details">
               <div
@@ -284,9 +318,10 @@ const Projects = () => {
                   }`}
                 >
                   <div className="img-details_container">
-                    This is a To-do list built where items can be added, marked
-                    as read and deleted. All the items added are saved in the
-                    local storage.
+                    This is a part of an e-commerce website which shows the
+                    items in your cart and shows the total price. You can also
+                    increase the quatity of items you want and you can remove an
+                    item you don't want.
                     <div>Built With: </div>
                     <div>
                       HTML

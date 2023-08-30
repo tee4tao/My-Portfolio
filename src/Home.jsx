@@ -20,7 +20,7 @@ import Footer from "./Footer";
 import Nav from "./Nav";
 import Aside from "./Aside";
 
-import { Outlet, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const {
@@ -124,9 +124,10 @@ const Home = () => {
                 am a proactive problem-solver with keen eye for detail dedicated
                 to delivering exceptional user experiences
               </div>
-              <button className="see-more">
-                <Link to={"/about"}>see more</Link>
-              </button>
+
+              <Link to={"/projects"} className="about-details_link">
+                <button className="see-more more-about">see more</button>
+              </Link>
             </div>
           </div>
         </section>
@@ -250,9 +251,9 @@ const Home = () => {
                 <div className="project-title">Grocery Bud</div>
               </div>
             </div>
-            <button className="see-more">
-              <Link to={"/projects"}>more projects</Link>
-            </button>
+            <Link to={"/projects"}>
+              <button className="see-more">more projects</button>
+            </Link>
           </div>
         </section>
         {/* contact */}
@@ -283,7 +284,7 @@ const Home = () => {
                   <div>
                     Send me a{" "}
                     <a className="link" href="https://twitter.com/tee4tao">
-                      tweet
+                      Tweet
                     </a>
                   </div>
                 </div>
@@ -297,7 +298,7 @@ const Home = () => {
                       className="link"
                       href="https://api.whatsapp.com/send/?phone=%2B2348165013325&text&type=phone_number&app_absent=0"
                     >
-                      whatsapp
+                      Whatsapp
                     </a>
                   </div>
                 </div>

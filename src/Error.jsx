@@ -1,8 +1,9 @@
-import React, { useEffect, useRef } from "react";
+import { useRef } from "react";
+import React from "react";
 import logo from "./Image/tee4tao W.jpg";
 import { Link } from "react-router-dom";
-import Footer from "./Footer";
 import { useGlobalContext } from "./context";
+import Footer from "./Footer";
 import {
   FaBars,
   FaTimes,
@@ -11,25 +12,12 @@ import {
   FaGithub,
   FaLinkedinIn,
 } from "react-icons/fa";
-const About = () => {
+
+const Error = () => {
   const { openSidebar, isOpen, closeSidebar } = useGlobalContext();
   const navRef = useRef(null);
-  useEffect(() => {
-    const navHeight = navRef.current.getBoundingClientRect().height;
-    const scrollFunc = () => {
-      const scrollHeight = window.pageYOffset;
-      if (scrollHeight > navHeight) {
-        navRef.current.classList.add("fixed-nav");
-      } else {
-        navRef.current.classList.remove("fixed-nav");
-      }
-    };
-    window.addEventListener("scroll", scrollFunc);
-
-    return () => window.removeEventListener(`scroll`, scrollFunc);
-  });
   return (
-    <main className="about-main">
+    <main className="error-main">
       {/* nav */}
       <nav className="nav" ref={navRef}>
         <div className="nav-center">
@@ -37,7 +25,7 @@ const About = () => {
             <Link to={"/"}>
               <img src={logo} alt="Tee4Tao" className="nav-logo" />
             </Link>
-
+            {/* <img src={logo} alt="Tee4Tao" className="nav-logo" /> */}
             <button className="aside-toggle_btn" onClick={openSidebar}>
               <FaBars />
             </button>
@@ -46,7 +34,7 @@ const About = () => {
             <Link to={"/"} className="scroll-link">
               home
             </Link>
-            <Link to={"/about"} className="scroll-link">
+            <Link to={"about"} className="scroll-link">
               about
             </Link>
             <Link to={"/projects"} className="scroll-link">
@@ -113,56 +101,15 @@ const About = () => {
           </ul>
         </div>
       </aside>
-      <section className="about" id="about">
-        <div className="about-container about-page_container">
-          <div className="header-container">
-            <h1 className="about-header">about me</h1>
-            <div className="underline about-underline"></div>
-          </div>
-          <div style={{ lineHeight: 2 }} className="about-details">
-            <div style={{ marginBottom: `1rem` }}>Hey There!</div>
-            <div style={{ marginBottom: `1rem` }}>
-              I am Taofeek Adeniyi, a Frontend Developer.
-            </div>
-            <div style={{ marginBottom: `1rem` }}>
-              I am a self-motivated Frontend Developer with more than a year
-              experience in designing and implementing user-centric web
-              applications.
-            </div>
-            <div style={{ marginBottom: `1rem` }}>
-              I am passionate about finding solutions to problem which makes me
-              study Mathematics in the University of Ibadan, Nigeria. So I am a
-              proactive problem-solver with keen eye for detail dedicated to
-              delivering exceptional user experiences
-            </div>
-            <div style={{ marginBottom: `1rem` }}>
-              <h4>Hobbies:</h4>
-              <div>
-                Basically, I love coding whereby I build stuffs, break code and
-                then fixing what I broke.😜
-              </div>
-              <div>
-                Aside that, I love playing mobile games(mostly CODM) and I love
-                outdoor cycling
-              </div>
-            </div>
-            <div>
-              <h4>Skills:</h4>
-              <div className="about-stack">
-                <span>html</span>
-                <span>css</span>
-                <span>tailwind css</span>
-                <span>github</span>
-                <span>javascript</span>
-                <span>react.js</span>
-              </div>
-            </div>
-          </div>
-        </div>
+      <section className="error">
+        <h1>OOPS! IT'S A DEAD END</h1>
+        <Link to={"/"} className="about-details_link">
+          <button className="see-more">BACK HOME</button>
+        </Link>
       </section>
       <Footer />
     </main>
   );
 };
 
-export default About;
+export default Error;

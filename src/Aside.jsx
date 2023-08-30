@@ -44,15 +44,6 @@ const Aside = () => {
                 contact
               </a>
             </li>
-            {/* {links.map((link) => {
-                return (
-                  <li key={link.id}>
-                    <Link to={link.url} onClick={toggleSidebar}>
-                      {link.text}
-                    </Link>
-                  </li>
-                );
-              })} */}
           </ul>
           <ul className={isOpen ? "social-links sidebar-icons" : null}>
             <li>
@@ -78,15 +69,6 @@ const Aside = () => {
                 <FaWhatsapp />
               </a>
             </li>
-            {/* {socialLinks.map((link) => {
-                return (
-                  <li key={link.id}>
-                    <a href={link.url} className="social-link">
-                      {link.icon}
-                    </a>
-                  </li>
-                );
-              })} */}
           </ul>
         </div>
       </aside>

@@ -436,6 +436,19 @@ about
   .about-underline {
     display: none;
   }
+  /* about page */
+  .about-page_container {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+  }
+  .about-page_container h1 {
+    font-size: 3rem;
+  }
+  .about-page_container .about-underline {
+    display: block;
+  }
 }
 
 @keyframes bounce {
@@ -454,6 +467,16 @@ about
   height: 0.2rem;
   background-color: #000;
   text-align: center;
+}
+.more-about {
+  width: 100%;
+  max-width: 6.5rem;
+  display: block;
+  margin: auto;
+}
+.about-details_link {
+  display: block;
+  margin-top: 2rem;
 }
 /*
 =============== 
@@ -509,6 +532,7 @@ projects
   font-size: 3rem;
   margin-bottom: 1rem;
   font-weight: 400;
+  text-align: center;
   /* margin: 2rem 0; */
 }
 .projects-details {
@@ -619,21 +643,21 @@ projects
   margin-left: 0.4rem;
 }
 .see-more {
-  /* font-size: clamp(1rem, 1.5vw, 2rem); */
   padding: 8px;
+  /* padding: 5px; */
   border-radius: 2rem;
   text-transform: capitalize;
   color: #fff;
-  /* background-color: #0f051d; */
+  background-color: #0f051d;
   background-color: rgba(0, 0, 0, 0.5);
   animation: bounce 2s ease-in-out infinite;
   margin-top: 1rem;
   cursor: pointer;
   transition: all 0.3s linear;
 }
-.see-more * {
+/* .see-more * {
   color: #000;
-}
+} */
 .see-more:hover {
   color: #0f051d;
   background-color: #fff;
@@ -680,7 +704,7 @@ contact
   font-size: 3rem;
   margin-bottom: 1rem;
   font-weight: 400;
-  /* margin: 2rem 0; */
+  text-align: center;
 }
 .contact-details {
   width: 100%;
@@ -775,4 +799,21 @@ footer {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 0.85rem;
+}
+/*
+=============== 
+error
+===============
+*/
+.error-main {
+  /* height: 100vh; */
+  /* position: relative; */
+  height: calc(100vh - 6.1rem);
+}
+.error {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
