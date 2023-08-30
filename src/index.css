@@ -764,6 +764,15 @@ footer {
   font-size: 1.2rem;
   text-transform: capitalize;
 }
-.about-main {
-  /* height: 100vh; */
+.about-stack span,
+.project-stack span {
+  display: inline-block;
+  background: #dae2ec;
+  color: #617d98;
+  margin: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
 }

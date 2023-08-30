@@ -168,16 +168,44 @@ const About = () => {
             <h1 className="about-header">about me</h1>
             <div className="underline about-underline"></div>
           </div>
-          <div className="about-details">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur
-            minus voluptatem earum unde eum? Quasi, ullam minima, repudiandae
-            labore necessitatibus reprehenderit delectus temporibus id ea rem
-            mollitia illo repellat ipsa. Quas fuga, quod dicta inventore dolorem
-            nihil alias nostrum ad voluptates. Sapiente, omnis. Ut, illo dolorum
-            aliquam itaque iste fugiat. Earum, error? Possimus deserunt
-            voluptatem, eius maxime quis quisquam dolor exercitationem fugiat
-            quibusdam molestiae quia nobis accusantium ipsam, ea est saepe
-            eveniet eaque sint nemo, consectetur voluptates aut. Optio, dolores!{" "}
+          <div style={{ lineHeight: 2 }} className="about-details">
+            <div style={{ marginBottom: `1rem` }}>Hey There!</div>
+            <div style={{ marginBottom: `1rem` }}>
+              I am Taofeek Adeniyi, a Frontend Developer.
+            </div>
+            <div style={{ marginBottom: `1rem` }}>
+              I am a self-motivated Frontend Developer with more than a year
+              experience in designing and implementing user-centric web
+              applications.
+            </div>
+            <div style={{ marginBottom: `1rem` }}>
+              I am passionate about finding solutions to problem which makes me
+              study Mathematics in the University of Ibadan, Nigeria. So I am a
+              proactive problem-solver with keen eye for detail dedicated to
+              delivering exceptional user experiences
+            </div>
+            <div style={{ marginBottom: `1rem` }}>
+              <h4>Hobbies:</h4>
+              <div>
+                Basically, I love coding whereby I build stuufs, break code and
+                then fixing what I broke.😜
+              </div>
+              <div>
+                Aside that, I love playing mobile games(mostly CODM) and I love
+                outdoor cycling
+              </div>
+            </div>
+            <div>
+              <h4>Skills:</h4>
+              <div class="about-stack">
+                <span>html</span>
+                <span>css</span>
+                <span>tailwind css</span>
+                <span>github</span>
+                <span>javascript</span>
+                <span>react.js</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>

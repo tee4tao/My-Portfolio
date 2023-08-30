@@ -109,17 +109,24 @@ const Home = () => {
               <div className="underline about-underline"></div>
             </div>
             <div className="about-details">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Aspernatur minus voluptatem earum unde eum? Quasi, ullam minima,
-              repudiandae labore necessitatibus reprehenderit delectus
-              temporibus id ea rem mollitia illo repellat ipsa. Quas fuga, quod
-              dicta inventore dolorem nihil alias nostrum ad voluptates.
-              Sapiente, omnis. Ut, illo dolorum aliquam itaque iste fugiat.
-              Earum, error? Possimus deserunt voluptatem, eius maxime quis
-              quisquam dolor exercitationem fugiat quibusdam molestiae quia
-              nobis accusantium ipsam, ea est saepe eveniet eaque sint nemo,
-              consectetur voluptates aut. Optio, dolores!{" "}
-              <Link to={"/about"}>see more</Link>
+              <div style={{ marginBottom: `1rem` }}>Hey There!</div>
+              <div style={{ marginBottom: `1rem` }}>
+                I am Taofeek Adeniyi, a Frontend Developer.
+              </div>
+              <div style={{ marginBottom: `1rem` }}>
+                I am a self-motivated Frontend Developer with more than a year
+                experience in designing and implementing user-centric web
+                applications.
+              </div>
+              <div>
+                I am passionate about finding solutions to problem which makes
+                me study Mathematics in the University of Ibadan, Nigeria. So I
+                am a proactive problem-solver with keen eye for detail dedicated
+                to delivering exceptional user experiences
+              </div>
+              <button className="see-more">
+                <Link to={"/about"}>see more</Link>
+              </button>
             </div>
           </div>
         </section>
