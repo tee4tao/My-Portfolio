@@ -119,10 +119,10 @@ const Home = () => {
                 applications.
               </div>
               <div>
-                I am passionate about finding solutions to problem which makes
-                me study Mathematics in the University of Ibadan, Nigeria. So I
-                am a proactive problem-solver with keen eye for detail dedicated
-                to delivering exceptional user experiences
+                I am passionate about finding solutions to problem which made me
+                study Mathematics in the University of Ibadan, Nigeria. So I am
+                a proactive problem-solver with keen eye for detail dedicated to
+                delivering exceptional user experiences
               </div>
 
               <Link to={"/about"} className="about-details_link">

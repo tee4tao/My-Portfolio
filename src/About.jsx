@@ -130,7 +130,7 @@ const About = () => {
               applications.
             </div>
             <div style={{ marginBottom: `1rem` }}>
-              I am passionate about finding solutions to problem which makes me
+              I am passionate about finding solutions to problem which made me
               study Mathematics in the University of Ibadan, Nigeria. So I am a
               proactive problem-solver with keen eye for detail dedicated to
               delivering exceptional user experiences
