@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { useGlobalContext } from "./context";
+import { TypeAnimation } from "react-type-animation";
 import {
   FaBars,
   FaTimes,
@@ -98,7 +99,30 @@ const Home = () => {
           <div className="hero-container">
             <img src={tao} alt="" className="hero-img" />
             <h1 className="hero-heading">taofeek adeniyi</h1>
-            <div className="hero-details">i'm a frontend developer</div>
+            <div className="hero-details">
+              <TypeAnimation
+                sequence={[
+                  // Same substring at the start will only be typed out once, initially
+                  "I'm",
+                  1000, // wait 1s before replacing "Mice" with "Hamsters"
+                  "I'm A",
+                  1000,
+                  "I'm A Frontend",
+                  1000,
+                  "I'm A Frontend Developer",
+                  1000,
+                ]}
+                wrapper="span"
+                speed={50}
+                style={{
+                  // fontSize: "2em",
+                  display: "inline-block",
+                  color: "white",
+                }}
+                repeat={Infinity}
+              />
+            </div>
+            {/* <div className="hero-details">i'm a frontend developer</div> */}
           </div>
         </section>
         {/* about */}
@@ -109,7 +133,26 @@ const Home = () => {
               <div className="underline about-underline"></div>
             </div>
             <div className="about-details">
-              <div style={{ marginBottom: `1rem` }}>Hey There!</div>
+              <TypeAnimation
+                style={{
+                  whiteSpace: "pre-line",
+                  // height: "195px",
+                  display: "block",
+                }}
+                sequence={[
+                  `Hey There!
+                  
+                 I am Taofeek Adeniyi, a Frontend Developer.
+                 
+                I am a self-motivated Frontend Developer with more than a year experience in designing and implementing user-centric web applications.
+
+                I am passionate about finding solutions to problem which made me study Mathematics in the University of Ibadan, Nigeria. So I am  a proactive problem-solver with keen eye for detail dedicated to delivering exceptional user experiences`,
+                  1000,
+                  "",
+                ]}
+                repeat={Infinity}
+              />
+              {/* <div style={{ marginBottom: `1rem` }}>Hey There!</div>
               <div style={{ marginBottom: `1rem` }}>
                 I am Taofeek Adeniyi, a Frontend Developer.
               </div>
@@ -123,7 +166,7 @@ const Home = () => {
                 study Mathematics in the University of Ibadan, Nigeria. So I am
                 a proactive problem-solver with keen eye for detail dedicated to
                 delivering exceptional user experiences
-              </div>
+              </div> */}
 
               <Link to={"/about"} className="about-details_link">
                 <button className="see-more more-about">see more</button>
