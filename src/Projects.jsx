@@ -288,7 +288,7 @@ const Projects = () => {
                 </div>
                 <img
                   src={project1}
-                  alt="CGPA Calculator"
+                  alt="Product page"
                   className={`${
                     openProject1Modal ? `project-img test` : `project-img`
                   }`}
