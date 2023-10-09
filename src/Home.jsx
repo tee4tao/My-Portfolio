@@ -16,6 +16,7 @@ import { BiLogoGmail } from "react-icons/bi";
 import tao from "./Image/tao img.jpg";
 import project1 from "./Image/CGPA-cal img.png";
 import project2 from "./Image/grocery-bud.png";
+import project3 from "./Image/product-page.png";
 import preloader from "./Image/preloader.gif";
 import Footer from "./Footer";
 import Nav from "./Nav";

@@ -7,6 +7,7 @@ import project1 from "./Image/CGPA-cal img.png";
 import project2 from "./Image/grocery-bud.png";
 import project3 from "./Image/cart.png";
 import project4 from "./Image/cocktail.png";
+import project5 from "./Image/product-page.png";
 import {
   FaBars,
   FaTimes,
@@ -30,6 +31,8 @@ const Projects = () => {
     setOpenProject3Modal,
     openProject4Modal,
     setOpenProject4Modal,
+    openProject5Modal,
+    setOpenProject5Modal,
   } = useGlobalContext();
   const navRef = useRef(null);
   useEffect(() => {
@@ -138,6 +141,61 @@ const Projects = () => {
             <div className="underline"></div>
           </div>
           <div className="test-container">
+            {/* project 5 */}
+            <div className="projects-details">
+              <div
+                className="project-img_container"
+                onMouseLeave={() => setOpenProject5Modal(false)}
+              >
+                <div
+                  className={`${
+                    openProject5Modal
+                      ? `project-img_details show-details`
+                      : `project-img_details`
+                  }`}
+                >
+                  <div className="img-details_container">
+                    This is a calculator that helps students calculate their
+                    CGPA and tell you the Class of Degree you fall into.
+                    <div>Built With: </div>
+                    <div>
+                      HTML
+                      <BsDot />
+                      CSS
+                      <BsDot />
+                      React JS
+                    </div>
+                    <div className="img-btns_container">
+                      <button className="view-project_btn">
+                        <a href="https://production-ecommerce.netlify.app/">
+                          view project
+                          <span className="btn-icon">
+                            <FaArrowCircleRight />
+                          </span>
+                        </a>
+                      </button>
+                      <button className="view-code_btn">
+                        <a href="https://github.com/tee4tao/E-Commerce_Frontend-Mentor">
+                          view code
+                          <span className="btn-icon">
+                            <FaGithub />
+                          </span>
+                        </a>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <img
+                  src={project5}
+                  alt="CGPA Calculator"
+                  className={`${
+                    openProject5Modal ? `project-img test` : `project-img`
+                  }`}
+                  onMouseEnter={() => setOpenProject5Modal(true)}
+                />
+              </div>
+              <div className="project-title">CGPA Calculator</div>
+            </div>
             {/* project 1 */}
             <div className="projects-details">
               <div
