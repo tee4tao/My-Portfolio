@@ -3,6 +3,7 @@ import logo from "./Image/tee4tao W.jpg";
 import { Link } from "react-router-dom";
 import Footer from "./Footer";
 import { useGlobalContext } from "./context";
+import { TypeAnimation } from "react-type-animation";
 import project1 from "./Image/CGPA-cal img.png";
 import project2 from "./Image/grocery-bud.png";
 import project3 from "./Image/cart.png";
@@ -155,16 +156,39 @@ const Projects = () => {
                   }`}
                 >
                   <div className="img-details_container">
-                    This is a calculator that helps students calculate their
-                    CGPA and tell you the Class of Degree you fall into.
-                    <div>Built With: </div>
-                    <div>
+                    {openProject5Modal && (
+                      <TypeAnimation
+                        sequence={[
+                          // Same substring at the start will only be typed out once, initially
+                          `This is a product page where you can checkout different images of the product, add any quantity of the product to your cart and check your cart for the items in it.
+                          
+                          Built With: 
+                          
+                            HTML . TailwindCSS . ReactJS`,
+                          1000,
+                          "",
+                        ]}
+                        wrapper="span"
+                        speed={50}
+                        style={{
+                          whiteSpace: "pre-line",
+                          display: "block",
+                          color: "white",
+                        }}
+                        repeat={Infinity}
+                      />
+                    )}
+                    {/* This is a product page where you can checkout different
+                    images of the product, add any quantity of the product to
+                    your cart and check your cart for the items in it */}
+                    {/* <div>Built With: </div> */}
+                    {/* <div>
                       HTML
                       <BsDot />
-                      CSS
+                      TailwindCSS
                       <BsDot />
                       React JS
-                    </div>
+                    </div> */}
                     <div className="img-btns_container">
                       <button className="view-project_btn">
                         <a href="https://production-ecommerce.netlify.app/">
@@ -210,7 +234,29 @@ const Projects = () => {
                   }`}
                 >
                   <div className="img-details_container">
-                    This is a calculator that helps students calculate their
+                    {openProject1Modal && (
+                      <TypeAnimation
+                        sequence={[
+                          // Same substring at the start will only be typed out once, initially
+                          `This is a calculator that helps students calculate their CGPA and tell you the Class of Degree you fall into.
+                          
+                          Built With: 
+                          
+                            HTML . CSS . ReactJS`,
+                          1000,
+                          "",
+                        ]}
+                        wrapper="span"
+                        speed={50}
+                        style={{
+                          whiteSpace: "pre-line",
+                          display: "block",
+                          color: "white",
+                        }}
+                        repeat={Infinity}
+                      />
+                    )}
+                    {/* This is a calculator that helps students calculate their
                     CGPA and tell you the Class of Degree you fall into.
                     <div>Built With: </div>
                     <div>
@@ -219,7 +265,7 @@ const Projects = () => {
                       CSS
                       <BsDot />
                       React JS
-                    </div>
+                    </div> */}
                     <div className="img-btns_container">
                       <button className="view-project_btn">
                         <a href="https://cgpa-calculator01.netlify.app/">
@@ -265,7 +311,29 @@ const Projects = () => {
                   }`}
                 >
                   <div className="img-details_container">
-                    This is a website where you can search for your favourite
+                    {openProject4Modal && (
+                      <TypeAnimation
+                        sequence={[
+                          // Same substring at the start will only be typed out once, initially
+                          `This is a website where you can search for your favourite cocktail. Data about the drinks are fetched from an API.
+                          
+                          Built With: 
+                          
+                            HTML . CSS . ReactJS`,
+                          1000,
+                          "",
+                        ]}
+                        wrapper="span"
+                        speed={50}
+                        style={{
+                          whiteSpace: "pre-line",
+                          display: "block",
+                          color: "white",
+                        }}
+                        repeat={Infinity}
+                      />
+                    )}
+                    {/* This is a website where you can search for your favourite
                     cocktail. Data about the drinks are fetched from an API.
                     <div>Built With: </div>
                     <div>
@@ -274,7 +342,7 @@ const Projects = () => {
                       CSS
                       <BsDot />
                       React JS
-                    </div>
+                    </div> */}
                     <div className="img-btns_container">
                       <button className="view-project_btn">
                         <a href="https://cocktails-projects.netlify.app/">
@@ -320,7 +388,29 @@ const Projects = () => {
                   }`}
                 >
                   <div className="img-details_container">
-                    This is a To-do list built where items can be added, marked
+                    {openProject2Modal && (
+                      <TypeAnimation
+                        sequence={[
+                          // Same substring at the start will only be typed out once, initially
+                          `This is a To-do list built where items can be added, marked as read and deleted. All the items added are saved in the local storage.
+                          
+                          Built With: 
+                          
+                            HTML . CSS . ReactJS`,
+                          1000,
+                          "",
+                        ]}
+                        wrapper="span"
+                        speed={50}
+                        style={{
+                          whiteSpace: "pre-line",
+                          display: "block",
+                          color: "white",
+                        }}
+                        repeat={Infinity}
+                      />
+                    )}
+                    {/* This is a To-do list built where items can be added, marked
                     as read and deleted. All the items added are saved in the
                     local storage.
                     <div>Built With: </div>
@@ -330,7 +420,7 @@ const Projects = () => {
                       CSS
                       <BsDot />
                       React JS
-                    </div>
+                    </div> */}
                     <div className="img-btns_container">
                       <button className="view-project_btn">
                         <a href="https://groceries-lists.netlify.app/">
@@ -376,7 +466,29 @@ const Projects = () => {
                   }`}
                 >
                   <div className="img-details_container">
-                    This is a part of an e-commerce website which shows the
+                    {openProject3Modal && (
+                      <TypeAnimation
+                        sequence={[
+                          // Same substring at the start will only be typed out once, initially
+                          `This is a part of an e-commerce website which shows the items in your cart and shows the total price. You can also increase the quatity of items you want and you can remove anitem you don't want.
+                          
+                          Built With: 
+                          
+                            HTML . CSS . ReactJS`,
+                          1000,
+                          "",
+                        ]}
+                        wrapper="span"
+                        speed={50}
+                        style={{
+                          whiteSpace: "pre-line",
+                          display: "block",
+                          color: "white",
+                        }}
+                        repeat={Infinity}
+                      />
+                    )}
+                    {/* This is a part of an e-commerce website which shows the
                     items in your cart and shows the total price. You can also
                     increase the quatity of items you want and you can remove an
                     item you don't want.
@@ -387,7 +499,7 @@ const Projects = () => {
                       CSS
                       <BsDot />
                       React JS
-                    </div>
+                    </div> */}
                     <div className="img-btns_container">
                       <button className="view-project_btn">
                         <a href="https://cart-item.netlify.app/">
