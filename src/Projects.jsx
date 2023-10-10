@@ -211,14 +211,14 @@ const Projects = () => {
                 </div>
                 <img
                   src={project5}
-                  alt="CGPA Calculator"
+                  alt="Product Page"
                   className={`${
                     openProject5Modal ? `project-img test` : `project-img`
                   }`}
                   onMouseEnter={() => setOpenProject5Modal(true)}
                 />
               </div>
-              <div className="project-title">CGPA Calculator</div>
+              <div className="project-title">Product Page</div>
             </div>
             {/* project 1 */}
             <div className="projects-details">
@@ -288,14 +288,14 @@ const Projects = () => {
                 </div>
                 <img
                   src={project1}
-                  alt="Product page"
+                  alt="CGPA Calculator"
                   className={`${
                     openProject1Modal ? `project-img test` : `project-img`
                   }`}
                   onMouseEnter={() => setOpenProject1Modal(true)}
                 />
               </div>
-              <div className="project-title">Product page</div>
+              <div className="project-title">CGPA Calculator</div>
             </div>
             {/* project 4 */}
             <div className="projects-details">
