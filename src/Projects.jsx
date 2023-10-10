@@ -295,7 +295,7 @@ const Projects = () => {
                   onMouseEnter={() => setOpenProject1Modal(true)}
                 />
               </div>
-              <div className="project-title">CGPA Calculator</div>
+              <div className="project-title">Product page</div>
             </div>
             {/* project 4 */}
             <div className="projects-details">
