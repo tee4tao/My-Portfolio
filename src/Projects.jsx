@@ -372,7 +372,7 @@ const Projects = () => {
                   onMouseEnter={() => setOpenProject4Modal(true)}
                 />
               </div>
-              <div className="project-title">Cart</div>
+              <div className="project-title">Cocktail</div>
             </div>
             {/* project 2 */}
             <div className="projects-details">

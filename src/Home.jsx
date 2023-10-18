@@ -197,7 +197,7 @@ const Home = () => {
                     }`}
                   >
                     <div className="img-details_container">
-                      This is a calculator that helps students calculate their
+                      {/* This is a calculator that helps students calculate their
                       CGPA and tell you the Class of Degree you fall into.
                       <div>Built With: </div>
                       <div>
@@ -206,7 +206,29 @@ const Home = () => {
                         CSS
                         <BsDot />
                         React JS
-                      </div>
+                      </div> */}
+                      {openProject1Modal && (
+                        <TypeAnimation
+                          sequence={[
+                            // Same substring at the start will only be typed out once, initially
+                            `This is a calculator that helps students calculate their CGPA and tell you the Class of Degree you fall into.
+                          
+                          Built With: 
+                          
+                            HTML . CSS . ReactJS`,
+                            1000,
+                            "",
+                          ]}
+                          wrapper="span"
+                          speed={50}
+                          style={{
+                            whiteSpace: "pre-line",
+                            display: "block",
+                            color: "white",
+                          }}
+                          repeat={Infinity}
+                        />
+                      )}
                       <div className="img-btns_container">
                         <button className="view-project_btn">
                           <a href="https://cgpa-calculator01.netlify.app/">
@@ -252,7 +274,7 @@ const Home = () => {
                     }`}
                   >
                     <div className="img-details_container">
-                      This is a To-do list built where items can be added,
+                      {/* This is a To-do list built where items can be added,
                       marked as read and deleted. All the items added are saved
                       in the local storage.
                       <div>Built With: </div>
@@ -262,7 +284,29 @@ const Home = () => {
                         CSS
                         <BsDot />
                         React JS
-                      </div>
+                      </div> */}
+                      {openProject2Modal && (
+                        <TypeAnimation
+                          sequence={[
+                            // Same substring at the start will only be typed out once, initially
+                            `This is a To-do list built where items can be added, marked as read and deleted. All the items added are saved in the local storage.
+                          
+                          Built With: 
+                          
+                            HTML . CSS . ReactJS`,
+                            1000,
+                            "",
+                          ]}
+                          wrapper="span"
+                          speed={50}
+                          style={{
+                            whiteSpace: "pre-line",
+                            display: "block",
+                            color: "white",
+                          }}
+                          repeat={Infinity}
+                        />
+                      )}
                       <div className="img-btns_container">
                         <button className="view-project_btn">
                           <a href="https://groceries-lists.netlify.app/">
