@@ -23,7 +23,7 @@ a {
   left: 0;
   right: 0;
   bottom: 0;
-  background: var(--clr-white);
+  background: white;
   display: grid;
   justify-content: center;
   align-items: center;
@@ -69,6 +69,23 @@ nav
 }
 .nav-links {
   display: none;
+}
+.scroll-watcher {
+  height: 5px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-color: #0f051d;
+  width: 100vw;
+  scale: 0 1;
+  transform-origin: left;
+  animation: scroll-watcher linear;
+  animation-timeline: scroll();
+}
+@keyframes scroll-watcher {
+  to {
+    scale: 1 1;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -736,6 +753,7 @@ contact
 }
 .link {
   color: #2caeba;
+  /* color: #2caeba; */
   position: relative;
   transition: all 0.3s linear;
 }

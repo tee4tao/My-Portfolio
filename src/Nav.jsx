@@ -9,6 +9,7 @@ const Nav = ({ navRef }) => {
   return (
     <>
       <nav className="nav" ref={navRef}>
+        <div className="scroll-watcher"></div>
         <div className="nav-center">
           <div className="nav-header">
             <Link to={"/"}>
