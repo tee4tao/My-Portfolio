@@ -16,7 +16,7 @@ import { BiLogoGmail } from "react-icons/bi";
 import tao from "./Image/tao img.jpg";
 import project1 from "./Image/CGPA-cal img.png";
 import project2 from "./Image/grocery-bud.png";
-import project3 from "./Image/product-page.png";
+import project3 from "./Image/shopper-comfy.png";
 import preloader from "./Image/preloader.gif";
 import Footer from "./Footer";
 import Nav from "./Nav";
@@ -183,6 +183,81 @@ const Home = () => {
               <div className="underline"></div>
             </div>
             <div className="test-container">
+              <div className="projects-details">
+                <div
+                  className="project-img_container"
+                  onMouseLeave={() => setOpenProject2Modal(false)}
+                >
+                  <div
+                    className={`${
+                      openProject2Modal
+                        ? `project-img_details show-details`
+                        : `project-img_details`
+                    }`}
+                  >
+                    <div className="img-details_container">
+                      {/* This is a To-do list built where items can be added,
+                                  marked as read and deleted. All the items added are saved
+                                  in the local storage.
+                                  <div>Built With: </div>
+                                  <div>
+                                    HTML
+                                    <BsDot />
+                                    CSS
+                                    <BsDot />
+                                    React JS
+                                  </div> */}
+                      {openProject2Modal && (
+                        <TypeAnimation
+                          sequence={[
+                            // Same substring at the start will only be typed out once, initially
+                            `This is an E-commerce website. It has features that include a sign-up/login page, adding, removing, and changing the quantities of goods in cart, checkout cart, and demo payment using Paystack.
+                                      Built With: 
+                                        HTML . CSS . TailwindCSS . ReactJS`,
+                            1000,
+                            "",
+                          ]}
+                          wrapper="span"
+                          speed={50}
+                          style={{
+                            whiteSpace: "pre-line",
+                            display: "block",
+                            color: "white",
+                          }}
+                          repeat={Infinity}
+                        />
+                      )}
+                      <div className="img-btns_container">
+                        <button className="view-project_btn">
+                          <a href="https://shoppercomfy.netlify.app/">
+                            view project
+                            <span className="btn-icon">
+                              <FaArrowCircleRight />
+                            </span>
+                          </a>
+                        </button>
+                        <button className="view-code_btn">
+                          <a href="https://github.com/tee4tao/ShopperComfy">
+                            view code
+                            <span className="btn-icon">
+                              <FaGithub />
+                            </span>
+                          </a>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <img
+                    src={project3}
+                    alt="ShopperComfy"
+                    className={`${
+                      openProject2Modal ? `project-img test` : `project-img`
+                    }`}
+                    onMouseEnter={() => setOpenProject2Modal(true)}
+                  />
+                </div>
+                <div className="project-title">ShopperComfy</div>
+              </div>
               {/* project 1 */}
               <div className="projects-details">
                 <div
@@ -261,83 +336,6 @@ const Home = () => {
                 <div className="project-title">CGPA Calculator</div>
               </div>
               {/* project 2 */}
-              <div className="projects-details">
-                <div
-                  className="project-img_container"
-                  onMouseLeave={() => setOpenProject2Modal(false)}
-                >
-                  <div
-                    className={`${
-                      openProject2Modal
-                        ? `project-img_details show-details`
-                        : `project-img_details`
-                    }`}
-                  >
-                    <div className="img-details_container">
-                      {/* This is a To-do list built where items can be added,
-                      marked as read and deleted. All the items added are saved
-                      in the local storage.
-                      <div>Built With: </div>
-                      <div>
-                        HTML
-                        <BsDot />
-                        CSS
-                        <BsDot />
-                        React JS
-                      </div> */}
-                      {openProject2Modal && (
-                        <TypeAnimation
-                          sequence={[
-                            // Same substring at the start will only be typed out once, initially
-                            `This is a To-do list built where items can be added, marked as read and deleted. All the items added are saved in the local storage.
-                          
-                          Built With: 
-                          
-                            HTML . CSS . ReactJS`,
-                            1000,
-                            "",
-                          ]}
-                          wrapper="span"
-                          speed={50}
-                          style={{
-                            whiteSpace: "pre-line",
-                            display: "block",
-                            color: "white",
-                          }}
-                          repeat={Infinity}
-                        />
-                      )}
-                      <div className="img-btns_container">
-                        <button className="view-project_btn">
-                          <a href="https://groceries-lists.netlify.app/">
-                            view project
-                            <span className="btn-icon">
-                              <FaArrowCircleRight />
-                            </span>
-                          </a>
-                        </button>
-                        <button className="view-code_btn">
-                          <a href="https://github.com/tee4tao/Grocery-bud-updated">
-                            view code
-                            <span className="btn-icon">
-                              <FaGithub />
-                            </span>
-                          </a>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                  <img
-                    src={project2}
-                    alt="Grocery Bud"
-                    className={`${
-                      openProject2Modal ? `project-img test` : `project-img`
-                    }`}
-                    onMouseEnter={() => setOpenProject2Modal(true)}
-                  />
-                </div>
-                <div className="project-title">Grocery Bud</div>
-              </div>
             </div>
             <Link to={"/projects"}>
               <button className="see-more">more projects</button>

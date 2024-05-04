@@ -10,6 +10,7 @@ export const AppProvider = ({ children }) => {
   const [openProject3Modal, setOpenProject3Modal] = useState(false);
   const [openProject4Modal, setOpenProject4Modal] = useState(false);
   const [openProject5Modal, setOpenProject5Modal] = useState(false);
+  const [openProject6Modal, setOpenProject6Modal] = useState(false);
   const closePreloader = () => {
     setOffPreloader(true);
   };
@@ -35,6 +36,8 @@ export const AppProvider = ({ children }) => {
         setOpenProject4Modal,
         openProject5Modal,
         setOpenProject5Modal,
+        openProject6Modal,
+        setOpenProject6Modal,
         openSidebar,
         closeSidebar,
         closePreloader,

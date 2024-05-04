@@ -9,6 +9,7 @@ import project2 from "./Image/grocery-bud.png";
 import project3 from "./Image/cart.png";
 import project4 from "./Image/cocktail.png";
 import project5 from "./Image/product-page.png";
+import project6 from "./Image/shopper-comfy.png";
 import {
   FaBars,
   FaTimes,
@@ -34,6 +35,8 @@ const Projects = () => {
     setOpenProject4Modal,
     openProject5Modal,
     setOpenProject5Modal,
+    openProject6Modal,
+    setOpenProject6Modal,
   } = useGlobalContext();
   const navRef = useRef(null);
   useEffect(() => {
@@ -142,6 +145,82 @@ const Projects = () => {
             <div className="underline"></div>
           </div>
           <div className="test-container">
+            {/* project 6 */}
+            <div className="projects-details">
+              <div
+                className="project-img_container"
+                onMouseLeave={() => setOpenProject6Modal(false)}
+              >
+                <div
+                  className={`${
+                    openProject6Modal
+                      ? `project-img_details show-details`
+                      : `project-img_details`
+                  }`}
+                >
+                  <div className="img-details_container">
+                    {openProject6Modal && (
+                      <TypeAnimation
+                        sequence={[
+                          // Same substring at the start will only be typed out once, initially
+                          `This is an E-commerce website. It has features that include a sign-up/login page, adding, removing, and changing the quantities of goods in cart, checkout cart, and demo payment using Paystack.
+                                      Built With: 
+                                        HTML . CSS . TailwindCSS . ReactJS`,
+                          1000,
+                          "",
+                        ]}
+                        wrapper="span"
+                        speed={50}
+                        style={{
+                          whiteSpace: "pre-line",
+                          display: "block",
+                          color: "white",
+                        }}
+                        repeat={Infinity}
+                      />
+                    )}
+                    {/* This is a product page where you can checkout different
+                    images of the product, add any quantity of the product to
+                    your cart and check your cart for the items in it */}
+                    {/* <div>Built With: </div> */}
+                    {/* <div>
+                      HTML
+                      <BsDot />
+                      TailwindCSS
+                      <BsDot />
+                      React JS
+                    </div> */}
+                    <div className="img-btns_container">
+                      <button className="view-project_btn">
+                        <a href="https://shoppercomfy.netlify.app/">
+                          view project
+                          <span className="btn-icon">
+                            <FaArrowCircleRight />
+                          </span>
+                        </a>
+                      </button>
+                      <button className="view-code_btn">
+                        <a href="https://github.com/tee4tao/ShopperComfy">
+                          view code
+                          <span className="btn-icon">
+                            <FaGithub />
+                          </span>
+                        </a>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <img
+                  src={project6}
+                  alt="ShopperComfy"
+                  className={`${
+                    openProject6Modal ? `project-img test` : `project-img`
+                  }`}
+                  onMouseEnter={() => setOpenProject6Modal(true)}
+                />
+              </div>
+              <div className="project-title">ShopperComfy</div>
+            </div>
             {/* project 5 */}
             <div className="projects-details">
               <div
