@@ -192,7 +192,10 @@ const Projects = () => {
                     </div> */}
                     <div className="img-btns_container">
                       <button className="view-project_btn">
-                        <a href="https://shoppercomfy.netlify.app/">
+                        <a
+                          href="https://shoppercomfy.netlify.app/"
+                          target="_blank"
+                        >
                           view project
                           <span className="btn-icon">
                             <FaArrowCircleRight />
@@ -200,7 +203,10 @@ const Projects = () => {
                         </a>
                       </button>
                       <button className="view-code_btn">
-                        <a href="https://github.com/tee4tao/ShopperComfy">
+                        <a
+                          href="https://github.com/tee4tao/ShopperComfy"
+                          target="_blank"
+                        >
                           view code
                           <span className="btn-icon">
                             <FaGithub />
@@ -270,7 +276,10 @@ const Projects = () => {
                     </div> */}
                     <div className="img-btns_container">
                       <button className="view-project_btn">
-                        <a href="https://production-ecommerce.netlify.app/">
+                        <a
+                          href="https://production-ecommerce.netlify.app/"
+                          target="_blank"
+                        >
                           view project
                           <span className="btn-icon">
                             <FaArrowCircleRight />
@@ -278,7 +287,10 @@ const Projects = () => {
                         </a>
                       </button>
                       <button className="view-code_btn">
-                        <a href="https://github.com/tee4tao/E-Commerce_Frontend-Mentor">
+                        <a
+                          href="https://github.com/tee4tao/E-Commerce_Frontend-Mentor"
+                          target="_blank"
+                        >
                           view code
                           <span className="btn-icon">
                             <FaGithub />
@@ -347,7 +359,10 @@ const Projects = () => {
                     </div> */}
                     <div className="img-btns_container">
                       <button className="view-project_btn">
-                        <a href="https://cgpa-calculator01.netlify.app/">
+                        <a
+                          href="https://cgpa-calculator01.netlify.app/"
+                          target="_blank"
+                        >
                           view project
                           <span className="btn-icon">
                             <FaArrowCircleRight />
@@ -355,7 +370,10 @@ const Projects = () => {
                         </a>
                       </button>
                       <button className="view-code_btn">
-                        <a href="https://github.com/tee4tao/cgpa-calculator">
+                        <a
+                          href="https://github.com/tee4tao/cgpa-calculator"
+                          target="_blank"
+                        >
                           view code
                           <span className="btn-icon">
                             <FaGithub />
@@ -424,7 +442,10 @@ const Projects = () => {
                     </div> */}
                     <div className="img-btns_container">
                       <button className="view-project_btn">
-                        <a href="https://cocktails-projects.netlify.app/">
+                        <a
+                          href="https://cocktails-projects.netlify.app/"
+                          target="_blank"
+                        >
                           view project
                           <span className="btn-icon">
                             <FaArrowCircleRight />
@@ -432,7 +453,10 @@ const Projects = () => {
                         </a>
                       </button>
                       <button className="view-code_btn">
-                        <a href="https://github.com/tee4tao/cocktails">
+                        <a
+                          href="https://github.com/tee4tao/cocktails"
+                          target="_blank"
+                        >
                           view code
                           <span className="btn-icon">
                             <FaGithub />
@@ -502,7 +526,10 @@ const Projects = () => {
                     </div> */}
                     <div className="img-btns_container">
                       <button className="view-project_btn">
-                        <a href="https://groceries-lists.netlify.app/">
+                        <a
+                          href="https://groceries-lists.netlify.app/"
+                          target="_blank"
+                        >
                           view project
                           <span className="btn-icon">
                             <FaArrowCircleRight />
@@ -510,7 +537,10 @@ const Projects = () => {
                         </a>
                       </button>
                       <button className="view-code_btn">
-                        <a href="https://github.com/tee4tao/Grocery-bud-updated">
+                        <a
+                          href="https://github.com/tee4tao/Grocery-bud-updated"
+                          target="_blank"
+                        >
                           view code
                           <span className="btn-icon">
                             <FaGithub />
@@ -581,7 +611,10 @@ const Projects = () => {
                     </div> */}
                     <div className="img-btns_container">
                       <button className="view-project_btn">
-                        <a href="https://cart-item.netlify.app/">
+                        <a
+                          href="https://cart-item.netlify.app/"
+                          target="_blank"
+                        >
                           view project
                           <span className="btn-icon">
                             <FaArrowCircleRight />
@@ -589,7 +622,10 @@ const Projects = () => {
                         </a>
                       </button>
                       <button className="view-code_btn">
-                        <a href="https://github.com/tee4tao/Cart">
+                        <a
+                          href="https://github.com/tee4tao/Cart"
+                          target="_blank"
+                        >
                           view code
                           <span className="btn-icon">
                             <FaGithub />

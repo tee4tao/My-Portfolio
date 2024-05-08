@@ -229,7 +229,11 @@ const Home = () => {
                       )}
                       <div className="img-btns_container">
                         <button className="view-project_btn">
-                          <a href="https://shoppercomfy.netlify.app/">
+                          <a
+                            href="https://shoppercomfy.netlify.app/"
+                            target="_blank"
+                            attribute
+                          >
                             view project
                             <span className="btn-icon">
                               <FaArrowCircleRight />
@@ -237,7 +241,10 @@ const Home = () => {
                           </a>
                         </button>
                         <button className="view-code_btn">
-                          <a href="https://github.com/tee4tao/ShopperComfy">
+                          <a
+                            href="https://github.com/tee4tao/ShopperComfy"
+                            target="_blank"
+                          >
                             view code
                             <span className="btn-icon">
                               <FaGithub />
@@ -306,7 +313,10 @@ const Home = () => {
                       )}
                       <div className="img-btns_container">
                         <button className="view-project_btn">
-                          <a href="https://cgpa-calculator01.netlify.app/">
+                          <a
+                            href="https://cgpa-calculator01.netlify.app/"
+                            target="_blank"
+                          >
                             view project
                             <span className="btn-icon">
                               <FaArrowCircleRight />
@@ -314,7 +324,10 @@ const Home = () => {
                           </a>
                         </button>
                         <button className="view-code_btn">
-                          <a href="https://github.com/tee4tao/cgpa-calculator">
+                          <a
+                            href="https://github.com/tee4tao/cgpa-calculator"
+                            target="_blank"
+                          >
                             view code
                             <span className="btn-icon">
                               <FaGithub />
