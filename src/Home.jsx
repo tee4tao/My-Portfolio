@@ -17,6 +17,13 @@ import tao from "./Image/tao img.jpg";
 import project1 from "./Image/CGPA-cal img.png";
 import project2 from "./Image/grocery-bud.png";
 import project3 from "./Image/shopper-comfy.png";
+import html from "./logos/html-5-logo-svgrepo-com.svg"
+import css from "./logos/CSS3_logo_and_wordmark.svg"
+import tailwindCSS from "./logos/Tailwind_CSS_Logo.svg"
+import javascript from "./logos/logo-javascript.svg"
+import react from "./logos/react-2.svg"
+import next from "./logos/nextjs-icon-svgrepo-com.svg"
+import github from "./logos/github-mark.svg"
 import preloader from "./Image/preloader.gif";
 import Footer from "./Footer";
 import Nav from "./Nav";
@@ -122,6 +129,44 @@ const Home = () => {
                 }}
                 repeat={Infinity}
               />
+            </div>
+            <div className="logos">
+             <div className="logos-slide">
+              <img src={html}  />
+              <img src={css}  />
+              <img src={tailwindCSS}  />
+              <img src={javascript}  />
+              <img src={react}  />
+              <img src={next}  />
+              <img src={github}  />
+             </div>
+             <div className="logos-slide">
+              <img src={html}  />
+              <img src={css}  />
+              <img src={tailwindCSS}  />
+              <img src={javascript}  />
+              <img src={react}  />
+              <img src={next}  />
+              <img src={github}  />
+             </div>
+             <div className="logos-slide">
+              <img src={html}  />
+              <img src={css}  />
+              <img src={tailwindCSS}  />
+              <img src={javascript}  />
+              <img src={react}  />
+              <img src={next}  />
+              <img src={github}  />
+             </div>
+             <div className="logos-slide">
+              <img src={html}  />
+              <img src={css}  />
+              <img src={tailwindCSS}  />
+              <img src={javascript}  />
+              <img src={react}  />
+              <img src={next}  />
+              <img src={github}  />
+             </div>
             </div>
             {/* <div className="hero-details">i'm a frontend developer</div> */}
           </div>
