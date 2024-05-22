@@ -6,7 +6,7 @@ import { useGlobalContext } from "./context";
 import { TypeAnimation } from "react-type-animation";
 import project1 from "./Image/CGPA-cal img.png";
 import project2 from "./Image/grocery-bud.png";
-import project3 from "./Image/cart.png";
+import project3 from "./Image/MixMaster.png";
 import project4 from "./Image/cocktail.png";
 import project5 from "./Image/product-page.png";
 import project6 from "./Image/shopper-comfy.png";
@@ -226,6 +226,79 @@ const Projects = () => {
                 />
               </div>
               <div className="project-title">ShopperComfy</div>
+            </div>
+            {/* project 3 */}
+            <div className="projects-details">
+              <div
+                className="project-img_container"
+                onMouseLeave={() => setOpenProject3Modal(false)}
+              >
+                <div
+                  className={`${
+                    openProject3Modal
+                      ? `project-img_details show-details`
+                      : `project-img_details`
+                  }`}
+                >
+                  <div className="img-details_container">
+                    {openProject3Modal && (
+                      <TypeAnimation
+                        sequence={[
+                          // Same substring at the start will only be typed out once, initially
+                          `Introducing "MixMaster," the ultimate party sidekick app that fetches cocktails from the hilarious Cocktails DB API. With a flick of your finger, you'll unlock a treasure trove of enchanting drink recipes that'll make your taste buds dance and your friends jump with joy.
+                          
+                          Built With: 
+                          
+                            HTML . CSS . TailwindCSS . NextJS`,
+                          1000,
+                          "",
+                        ]}
+                        wrapper="span"
+                        speed={50}
+                        style={{
+                          whiteSpace: "pre-line",
+                          display: "block",
+                          color: "white",
+                        }}
+                        repeat={Infinity}
+                      />
+                    )}
+                    <div className="img-btns_container">
+                      <button className="view-project_btn">
+                        <a
+                          href="https://mix-master-ten.vercel.app/"
+                          target="_blank"
+                        >
+                          view project
+                          <span className="btn-icon">
+                            <FaArrowCircleRight />
+                          </span>
+                        </a>
+                      </button>
+                      <button className="view-code_btn">
+                        <a
+                          href="https://github.com/tee4tao/MixMaster"
+                          target="_blank"
+                        >
+                          view code
+                          <span className="btn-icon">
+                            <FaGithub />
+                          </span>
+                        </a>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <img
+                  src={project3}
+                  alt="MixMaster"
+                  className={`${
+                    openProject3Modal ? `project-img test` : `project-img`
+                  }`}
+                  onMouseEnter={() => setOpenProject3Modal(true)}
+                />
+              </div>
+              <div className="project-title">MixMaster</div>
             </div>
             {/* project 5 */}
             <div className="projects-details">
@@ -561,91 +634,7 @@ const Projects = () => {
               </div>
               <div className="project-title">Grocery Bud</div>
             </div>
-            {/* project 3 */}
-            <div className="projects-details">
-              <div
-                className="project-img_container"
-                onMouseLeave={() => setOpenProject3Modal(false)}
-              >
-                <div
-                  className={`${
-                    openProject3Modal
-                      ? `project-img_details show-details`
-                      : `project-img_details`
-                  }`}
-                >
-                  <div className="img-details_container">
-                    {openProject3Modal && (
-                      <TypeAnimation
-                        sequence={[
-                          // Same substring at the start will only be typed out once, initially
-                          `This is a part of an e-commerce website which shows the items in your cart and shows the total price. You can also increase the quatity of items you want and you can remove anitem you don't want.
-                          
-                          Built With: 
-                          
-                            HTML . CSS . ReactJS`,
-                          1000,
-                          "",
-                        ]}
-                        wrapper="span"
-                        speed={50}
-                        style={{
-                          whiteSpace: "pre-line",
-                          display: "block",
-                          color: "white",
-                        }}
-                        repeat={Infinity}
-                      />
-                    )}
-                    {/* This is a part of an e-commerce website which shows the
-                    items in your cart and shows the total price. You can also
-                    increase the quatity of items you want and you can remove an
-                    item you don't want.
-                    <div>Built With: </div>
-                    <div>
-                      HTML
-                      <BsDot />
-                      CSS
-                      <BsDot />
-                      React JS
-                    </div> */}
-                    <div className="img-btns_container">
-                      <button className="view-project_btn">
-                        <a
-                          href="https://cart-item.netlify.app/"
-                          target="_blank"
-                        >
-                          view project
-                          <span className="btn-icon">
-                            <FaArrowCircleRight />
-                          </span>
-                        </a>
-                      </button>
-                      <button className="view-code_btn">
-                        <a
-                          href="https://github.com/tee4tao/Cart"
-                          target="_blank"
-                        >
-                          view code
-                          <span className="btn-icon">
-                            <FaGithub />
-                          </span>
-                        </a>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <img
-                  src={project3}
-                  alt="Cart"
-                  className={`${
-                    openProject3Modal ? `project-img test` : `project-img`
-                  }`}
-                  onMouseEnter={() => setOpenProject3Modal(true)}
-                />
-              </div>
-              <div className="project-title">Cart</div>
-            </div>
+            
           </div>
         </div>
       </section>

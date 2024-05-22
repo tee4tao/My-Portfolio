@@ -17,6 +17,7 @@ import tao from "./Image/tao img.jpg";
 import project1 from "./Image/CGPA-cal img.png";
 import project2 from "./Image/grocery-bud.png";
 import project3 from "./Image/shopper-comfy.png";
+import project4 from "./Image/MixMaster.png"
 import html from "./logos/html-5-logo-svgrepo-com.svg"
 import css from "./logos/CSS3_logo_and_wordmark.svg"
 import tailwindCSS from "./logos/Tailwind_CSS_Logo.svg"
@@ -198,21 +199,6 @@ const Home = () => {
                 ]}
                 repeat={Infinity}
               />
-              {/* <div style={{ marginBottom: `1rem` }}>Hey There!</div>
-              <div style={{ marginBottom: `1rem` }}>
-                I am Taofeek Adeniyi, a Frontend Developer.
-              </div>
-              <div style={{ marginBottom: `1rem` }}>
-                I am a self-motivated Frontend Developer with more than a year
-                experience in designing and implementing user-centric web
-                applications.
-              </div>
-              <div>
-                I am passionate about finding solutions to problem which made me
-                study Mathematics in the University of Ibadan, Nigeria. So I am
-                a proactive problem-solver with keen eye for detail dedicated to
-                delivering exceptional user experiences
-              </div> */}
 
               <Link to={"/about"} className="about-details_link">
                 <button className="see-more more-about">see more</button>
@@ -241,17 +227,6 @@ const Home = () => {
                     }`}
                   >
                     <div className="img-details_container">
-                      {/* This is a To-do list built where items can be added,
-                                  marked as read and deleted. All the items added are saved
-                                  in the local storage.
-                                  <div>Built With: </div>
-                                  <div>
-                                    HTML
-                                    <BsDot />
-                                    CSS
-                                    <BsDot />
-                                    React JS
-                                  </div> */}
                       {openProject2Modal && (
                         <TypeAnimation
                           sequence={[
@@ -338,11 +313,11 @@ const Home = () => {
                         <TypeAnimation
                           sequence={[
                             // Same substring at the start will only be typed out once, initially
-                            `This is a calculator that helps students calculate their CGPA and tell you the Class of Degree you fall into.
+                            `Introducing "MixMaster," the ultimate party sidekick app that fetches cocktails from the hilarious Cocktails DB API. With a flick of your finger, you'll unlock a treasure trove of enchanting drink recipes that'll make your taste buds dance and your friends jump with joy.
                           
                           Built With: 
                           
-                            HTML . CSS . ReactJS`,
+                            HTML . CSS . TailwindCSS . NextJS`,
                             1000,
                             "",
                           ]}
@@ -359,7 +334,7 @@ const Home = () => {
                       <div className="img-btns_container">
                         <button className="view-project_btn">
                           <a
-                            href="https://cgpa-calculator01.netlify.app/"
+                            href="https://mix-master-ten.vercel.app/"
                             target="_blank"
                           >
                             view project
@@ -370,7 +345,7 @@ const Home = () => {
                         </button>
                         <button className="view-code_btn">
                           <a
-                            href="https://github.com/tee4tao/cgpa-calculator"
+                            href="https://github.com/tee4tao/MixMaster"
                             target="_blank"
                           >
                             view code
@@ -383,15 +358,15 @@ const Home = () => {
                     </div>
                   </div>
                   <img
-                    src={project1}
-                    alt="CGPA Calculator"
+                    src={project4}
+                    alt="MixMaster"
                     className={`${
                       openProject1Modal ? `project-img test` : `project-img`
                     }`}
                     onMouseEnter={() => setOpenProject1Modal(true)}
                   />
                 </div>
-                <div className="project-title">CGPA Calculator</div>
+                <div className="project-title">MixMaster</div>
               </div>
               {/* project 2 */}
             </div>
