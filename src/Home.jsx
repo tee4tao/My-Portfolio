@@ -313,10 +313,8 @@ const Home = () => {
                         <TypeAnimation
                           sequence={[
                             // Same substring at the start will only be typed out once, initially
-                            `Introducing "MixMaster," the ultimate party sidekick app that fetches cocktails from the hilarious Cocktails DB API. With a flick of your finger, you'll unlock a treasure trove of enchanting drink recipes that'll make your taste buds dance and your friends jump with joy.
-                          
+                            `Introducing "MixMaster," the ultimate party sidekick app that fetches cocktails from the hilarious Cocktails DB API. With a flick of your finger, you'll unlock a treasure trove of enchanting drink recipes.
                           Built With: 
-                          
                             HTML . CSS . TailwindCSS . NextJS`,
                             1000,
                             "",
